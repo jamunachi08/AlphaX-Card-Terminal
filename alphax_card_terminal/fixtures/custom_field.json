@@ -1,6 +1,7 @@
 [
   {
     "doctype": "Custom Field",
+    "name": "Mode of Payment-act_capture_terminal_data",
     "dt": "Mode of Payment",
     "fieldname": "act_capture_terminal_data",
     "label": "Capture Terminal Data",
@@ -10,6 +11,7 @@
   },
   {
     "doctype": "Custom Field",
+    "name": "Mode of Payment-act_terminal_settings",
     "dt": "Mode of Payment",
     "fieldname": "act_terminal_settings",
     "label": "Terminal Settings",
@@ -19,6 +21,7 @@
   },
   {
     "doctype": "Custom Field",
+    "name": "Mode of Payment-act_require_terminal_approval",
     "dt": "Mode of Payment",
     "fieldname": "act_require_terminal_approval",
     "label": "Require Terminal Approval",
@@ -28,6 +31,7 @@
   },
   {
     "doctype": "Custom Field",
+    "name": "Mode of Payment-act_allow_manual_ref",
     "dt": "Mode of Payment",
     "fieldname": "act_allow_manual_ref",
     "label": "Allow Manual Reference (Fallback)",
