@@ -1,1 +1,5 @@
-recursive-include alphax_card_terminal *
+include README.md
+include license.txt
+recursive-include alphax_card_terminal/public *
+recursive-include alphax_card_terminal *.json
+recursive-include alphax_card_terminal *.py

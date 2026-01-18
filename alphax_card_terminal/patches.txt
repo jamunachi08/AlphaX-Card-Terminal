@@ -1,2 +1,1 @@
-# This file is required by Frappe's app validation.
-# Add dotted patch paths here when you create database/schema/data patches.
+# Add patch paths here, one per line.
