@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alphax_card_terminal"
+version = "0.2.0"
+description = "Card terminal metadata capture framework for ERPNext/Frappe"
+authors = [{ name = "AlphaX" }]
+readme = "README.md"
+requires-python = ">=3.10"
+# Frappe/ERPNext provide the runtime; keep dependencies minimal.
+dependencies = []
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]

@@ -1,0 +1,38 @@
+[
+  {
+    "doctype": "Custom Field",
+    "dt": "Mode of Payment",
+    "fieldname": "act_capture_terminal_data",
+    "label": "Capture Terminal Data",
+    "fieldtype": "Check",
+    "insert_after": "type",
+    "default": 0
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Mode of Payment",
+    "fieldname": "act_terminal_settings",
+    "label": "Terminal Settings",
+    "fieldtype": "Link",
+    "options": "AlphaX Payment Terminal Settings",
+    "insert_after": "act_capture_terminal_data"
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Mode of Payment",
+    "fieldname": "act_require_terminal_approval",
+    "label": "Require Terminal Approval",
+    "fieldtype": "Check",
+    "insert_after": "act_terminal_settings",
+    "default": 1
+  },
+  {
+    "doctype": "Custom Field",
+    "dt": "Mode of Payment",
+    "fieldname": "act_allow_manual_ref",
+    "label": "Allow Manual Reference (Fallback)",
+    "fieldtype": "Check",
+    "insert_after": "act_require_terminal_approval",
+    "default": 0
+  }
+]
