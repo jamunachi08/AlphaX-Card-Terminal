@@ -1,0 +1,15 @@
+[
+  {
+    "doctype": "AlphaX Bank App Config",
+    "name": "MADA_DEFAULT",
+    "config_code": "MADA_DEFAULT",
+    "config_name": "Mada Default (Template)",
+    "is_active": 1,
+    "package_name": "",
+    "intent_action_sale": "",
+    "intent_action_refund": "",
+    "extras_json": "{\n  \"amount\": \"{{amount}}\",\n  \"currency\": \"{{currency}}\",\n  \"invoice\": \"{{reference.name}}\",\n  \"uuid\": \"{{uuid}}\"\n}",
+    "response_mapping_json": "{\n  \"status\": \"status\",\n  \"rrn\": \"rrn\",\n  \"auth_code\": \"auth_code\",\n  \"terminal_id\": \"terminal_id\",\n  \"merchant_id\": \"merchant_id\",\n  \"masked_pan\": \"card.masked_pan\",\n  \"brand\": \"card.brand\"\n}",
+    "notes": "Fill package_name and intent actions as per bank POS app on Aisino A90."
+  }
+]

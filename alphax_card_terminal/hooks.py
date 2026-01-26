@@ -23,6 +23,8 @@ fixtures = [
     "Custom Field",
     "Print Format",
     {"dt": "AlphaX Terminal Driver", "filters": [["is_active", "=", 1]]},
+    {"dt": "AlphaX Terminal Brand", "filters": [["is_active", "=", 1]]},
+    {"dt": "AlphaX Bank App Config", "filters": [["is_active", "=", 1]]},
 ]
 
 # -----------------------------------------------------------------------------

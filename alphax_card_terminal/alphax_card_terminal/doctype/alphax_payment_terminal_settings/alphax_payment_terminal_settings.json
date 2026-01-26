@@ -50,6 +50,28 @@
       "in_list_view": 1
     },
     {
+      "fieldname": "brand",
+      "label": "Brand",
+      "fieldtype": "Link",
+      "options": "AlphaX Terminal Brand",
+      "description": "Card brand/payment scheme for this terminal profile (e.g., MADA, VISA).",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "bank_app_config",
+      "label": "Bank App Config",
+      "fieldtype": "Link",
+      "options": "AlphaX Bank App Config",
+      "description": "Android POS bank application intent configuration (for Smart POS/Aisino)."
+    },
+    {
+      "fieldname": "device",
+      "label": "Terminal Device",
+      "fieldtype": "Link",
+      "options": "AlphaX Terminal Device",
+      "description": "Optional device mapping (MQTT topic/device id)."
+    },
+    {
       "fieldname": "endpoint_url",
       "label": "Endpoint URL",
       "fieldtype": "Data"

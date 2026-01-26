@@ -1,0 +1,24 @@
+[
+  {
+    "doctype": "AlphaX Terminal Brand",
+    "name": "MADA",
+    "brand_code": "MADA",
+    "brand_name": "Mada",
+    "is_active": 1,
+    "notes": "Saudi Payments (mada) scheme."
+  },
+  {
+    "doctype": "AlphaX Terminal Brand",
+    "name": "VISA",
+    "brand_code": "VISA",
+    "brand_name": "Visa",
+    "is_active": 1
+  },
+  {
+    "doctype": "AlphaX Terminal Brand",
+    "name": "MASTERCARD",
+    "brand_code": "MASTERCARD",
+    "brand_name": "Mastercard",
+    "is_active": 1
+  }
+]

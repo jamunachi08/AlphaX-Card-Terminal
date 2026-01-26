@@ -1,0 +1,82 @@
+{
+  "doctype": "DocType",
+  "name": "AlphaX Bank App Config",
+  "module": "AlphaX Card Terminal",
+  "custom": 0,
+  "is_table": 0,
+  "editable_grid": 0,
+  "autoname": "field:config_code",
+  "fields": [
+    {
+      "fieldname": "is_active",
+      "label": "Is Active",
+      "fieldtype": "Check",
+      "default": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "config_code",
+      "label": "Config Code",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "unique": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "config_name",
+      "label": "Config Name",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "package_name",
+      "label": "Android Package Name",
+      "fieldtype": "Data",
+      "description": "Bank/Mada POS app package name on the Aisino device."
+    },
+    {
+      "fieldname": "intent_action_sale",
+      "label": "Intent Action (SALE)",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "intent_action_refund",
+      "label": "Intent Action (REFUND)",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "extras_json",
+      "label": "Intent Extras (JSON)",
+      "fieldtype": "Code",
+      "options": "JSON",
+      "description": "Key/value extras to pass to the bank app. Use placeholders like {{amount}}, {{currency}}, {{invoice}}, {{uuid}}."
+    },
+    {
+      "fieldname": "response_mapping_json",
+      "label": "Response Mapping (JSON)",
+      "fieldtype": "Code",
+      "options": "JSON",
+      "description": "Map provider response keys to standard AlphaX fields (status, rrn, auth_code, terminal_id, masked_pan)."
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

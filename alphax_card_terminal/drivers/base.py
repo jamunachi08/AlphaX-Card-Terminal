@@ -15,6 +15,7 @@ class DriverMode(str, Enum):
 
 
 @dataclass
+@dataclass
 class CaptureRequest:
     mode_of_payment: str
     amount: float
@@ -22,7 +23,6 @@ class CaptureRequest:
     reference_doctype: Optional[str] = None
     reference_name: Optional[str] = None
     idempotency_key: Optional[str] = None
-
 
 class BaseTerminalDriver:
     """Base class for terminal drivers.

@@ -119,3 +119,8 @@ If `callback_secret` is configured in Terminal Settings config_json, send:
 - Add idempotency (uuid/idempotency_key) to prevent double capture.
 - Implement a reconciliation report (ERP payments vs terminal approvals).
 
+
+
+## User Manual
+
+See `alphax_card_terminal/docs/USER_MANUAL.md` for complete configuration and operations guide (drivers, brands, bank app intents, devices, terminal profiles).
