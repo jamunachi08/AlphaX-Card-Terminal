@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-# AlphaX Card Terminal
-
-Frappe/ERPNext app for capturing card terminal metadata.
-
-## Install
-
-```bash
-bench get-app https://github.com/.../AlphaX-Card-Terminal
-bench --site <site> install-app alphax_card_terminal
-```
-=======
 # AlphaX Card Terminal (Driver Framework)
 
 Vendor‑neutral Frappe/ERPNext app to integrate **any** card terminal / payment provider using a **Driver Catalog** model (similar to installing printer drivers in Windows).
@@ -131,4 +119,3 @@ If `callback_secret` is configured in Terminal Settings config_json, send:
 - Add idempotency (uuid/idempotency_key) to prevent double capture.
 - Implement a reconciliation report (ERP payments vs terminal approvals).
 
->>>>>>> de0f9a1 (vNext: terminal driver framework (catalog, sessions, async callback, client SDK patterns))
