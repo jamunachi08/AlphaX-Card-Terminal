@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="alphax_card_terminal",
-    version='0.0.4',
+    version="0.0.5",
     description="Card terminal metadata capture framework (MoP-driven) for ERPNext/Frappe.",
     author="AlphaX",
     author_email="support@alphax.com",
