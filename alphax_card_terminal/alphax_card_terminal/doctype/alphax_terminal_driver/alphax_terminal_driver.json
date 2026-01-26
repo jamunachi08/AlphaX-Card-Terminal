@@ -1,0 +1,74 @@
+{
+  "doctype": "DocType",
+  "name": "AlphaX Terminal Driver",
+  "module": "AlphaX Card Terminal",
+  "custom": 0,
+  "is_table": 0,
+  "editable_grid": 0,
+  "autoname": "field:driver_code",
+  "fields": [
+    {
+      "fieldname": "driver_code",
+      "label": "Driver Code",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "driver_name",
+      "label": "Driver Name",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "is_active",
+      "label": "Active",
+      "fieldtype": "Check",
+      "default": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "handler_path",
+      "label": "Handler Path",
+      "fieldtype": "Data",
+      "reqd": 1
+    },
+    {
+      "fieldname": "description",
+      "label": "Description",
+      "fieldtype": "Small Text"
+    },
+    {
+      "fieldname": "capabilities",
+      "label": "Capabilities (CSV)",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "config_schema",
+      "label": "Config Schema (JSON)",
+      "fieldtype": "Code",
+      "options": "JSON"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Accounts Manager",
+      "read": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

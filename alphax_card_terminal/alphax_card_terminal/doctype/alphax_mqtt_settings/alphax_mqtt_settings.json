@@ -1,0 +1,93 @@
+{
+  "doctype": "DocType",
+  "name": "AlphaX MQTT Settings",
+  "module": "AlphaX Card Terminal",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "autoname": "hash",
+  "fields": [
+    {
+      "fieldname": "enabled",
+      "label": "Enabled",
+      "fieldtype": "Check",
+      "default": 1
+    },
+    {
+      "fieldname": "broker_host",
+      "label": "Broker Host",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "broker_port",
+      "label": "Broker Port",
+      "fieldtype": "Int",
+      "default": 1883
+    },
+    {
+      "fieldname": "use_ssl",
+      "label": "Use SSL",
+      "fieldtype": "Check",
+      "default": 0
+    },
+    {
+      "fieldname": "username",
+      "label": "Username",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "password",
+      "label": "Password",
+      "fieldtype": "Password"
+    },
+    {
+      "fieldname": "default_qos",
+      "label": "Default QoS",
+      "fieldtype": "Int",
+      "default": 1
+    },
+    {
+      "fieldname": "keepalive",
+      "label": "Keepalive (sec)",
+      "fieldtype": "Int",
+      "default": 60
+    },
+    {
+      "fieldname": "timeout_seconds",
+      "label": "Timeout (sec)",
+      "fieldtype": "Int",
+      "default": 60
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "export": 1,
+      "import": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "allow_rename": 0,
+  "quick_entry": 0,
+  "default_view": "List",
+  "is_submittable": 0,
+  "engine": "InnoDB"
+}

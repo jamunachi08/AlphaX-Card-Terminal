@@ -29,6 +29,16 @@
       "in_list_view": 1
     },
     {
+<<<<<<< HEAD
+=======
+      "fieldname": "branch",
+      "label": "Branch",
+      "fieldtype": "Link",
+      "options": "Branch",
+      "in_list_view": 1
+    },
+    {
+>>>>>>> de0f9a1 (vNext: terminal driver framework (catalog, sessions, async callback, client SDK patterns))
       "fieldname": "provider",
       "label": "Provider/Driver",
       "fieldtype": "Select",
@@ -36,11 +46,31 @@
       "default": "Generic REST"
     },
     {
+<<<<<<< HEAD
+=======
+      "fieldname": "driver",
+      "label": "Driver",
+      "fieldtype": "Link",
+      "options": "AlphaX Terminal Driver",
+      "in_list_view": 1
+    },
+    {
+>>>>>>> de0f9a1 (vNext: terminal driver framework (catalog, sessions, async callback, client SDK patterns))
       "fieldname": "endpoint_url",
       "label": "Endpoint URL",
       "fieldtype": "Data"
     },
     {
+<<<<<<< HEAD
+=======
+      "fieldname": "config_json",
+      "label": "Driver Config (JSON)",
+      "fieldtype": "Code",
+      "options": "JSON",
+      "description": "Optional JSON configuration for the selected driver. If provided, it overrides individual fields where applicable."
+    },
+    {
+>>>>>>> de0f9a1 (vNext: terminal driver framework (catalog, sessions, async callback, client SDK patterns))
       "fieldname": "terminal_ip",
       "label": "Terminal IP",
       "fieldtype": "Data"

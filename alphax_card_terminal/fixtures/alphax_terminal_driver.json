@@ -1,0 +1,72 @@
+[
+  {
+    "doctype": "AlphaX Terminal Driver",
+    "driver_code": "simulator",
+    "driver_name": "Simulator (Demo/Training)",
+    "is_active": 1,
+    "handler_path": "alphax_card_terminal.drivers.impl.simulator.SimulatorDriver",
+    "description": "Built-in simulator for demos, training, and testing without a physical terminal.",
+    "capabilities": "SALE",
+    "config_schema": "{\n  \"fields\": []\n}"
+  },
+  {
+    "doctype": "AlphaX Terminal Driver",
+    "driver_code": "generic_rest",
+    "driver_name": "Generic REST (HTTP)",
+    "is_active": 1,
+    "handler_path": "alphax_card_terminal.drivers.impl.generic_rest.GenericRestDriver",
+    "description": "HTTP driver for terminals/middleware exposing REST endpoints.",
+    "capabilities": "SALE,VOID,REFUND",
+    "config_schema": "{\n  \"fields\": [\n    {\n      \"fieldname\": \"endpoint_url\",\n      \"label\": \"Endpoint URL\",\n      \"fieldtype\": \"Data\",\n      \"reqd\": 1\n    },\n    {\n      \"fieldname\": \"timeout_seconds\",\n      \"label\": \"Timeout (sec)\",\n      \"fieldtype\": \"Int\",\n      \"default\": 45\n    },\n    {\n      \"fieldname\": \"merchant_id\",\n      \"label\": \"Merchant ID (MID)\",\n      \"fieldtype\": \"Data\"\n    },\n    {\n      \"fieldname\": \"terminal_id\",\n      \"label\": \"Terminal ID (TID)\",\n      \"fieldtype\": \"Data\"\n    }\n  ]\n}"
+  },
+  {
+    "doctype": "AlphaX Terminal Driver",
+    "driver_code": "local_bridge",
+    "driver_name": "Local Bridge (localhost)",
+    "is_active": 1,
+    "handler_path": "alphax_card_terminal.drivers.impl.local_bridge.LocalBridgeDriver",
+    "description": "Local agent/bridge running on POS machine. Ideal for bank terminals that require local SDK.",
+    "capabilities": "SALE,VOID,REFUND",
+    "config_schema": "{\n  \"fields\": [\n    {\n      \"fieldname\": \"endpoint_url\",\n      \"label\": \"Bridge URL\",\n      \"fieldtype\": \"Data\",\n      \"default\": \"http://127.0.0.1:9797/capture\"\n    },\n    {\n      \"fieldname\": \"timeout_seconds\",\n      \"label\": \"Timeout (sec)\",\n      \"fieldtype\": \"Int\",\n      \"default\": 60\n    }\n  ]\n}"
+  },
+  {
+    "doctype": "AlphaX Terminal Driver",
+    "driver_code": "network_tcp",
+    "driver_name": "Network TCP (LAN Terminal)",
+    "is_active": 1,
+    "handler_path": "alphax_card_terminal.drivers.impl.network_tcp.NetworkTcpDriver",
+    "description": "Socket-based terminals reachable over LAN. Protocol is vendor-specific; extend as needed.",
+    "capabilities": "SALE",
+    "config_schema": "{\n  \"fields\": [\n    {\n      \"fieldname\": \"terminal_ip\",\n      \"label\": \"Terminal IP\",\n      \"fieldtype\": \"Data\",\n      \"reqd\": 1\n    },\n    {\n      \"fieldname\": \"terminal_port\",\n      \"label\": \"Terminal Port\",\n      \"fieldtype\": \"Int\",\n      \"reqd\": 1\n    },\n    {\n      \"fieldname\": \"timeout_seconds\",\n      \"label\": \"Timeout (sec)\",\n      \"fieldtype\": \"Int\",\n      \"default\": 45\n    }\n  ]\n}"
+  },
+  {
+    "doctype": "AlphaX Terminal Driver",
+    "driver_code": "mqtt_async_bridge",
+    "driver_name": "MQTT Async Bridge (Agent + Callback)",
+    "is_active": 1,
+    "handler_path": "alphax_card_terminal.drivers.impl.mqtt_async.MqttAsyncBridgeDriver",
+    "description": "Vendor-neutral async pattern: ERP publishes capture to MQTT; device/agent executes payment and calls back via HTTP.",
+    "capabilities": "SALE,VOID,REFUND",
+    "config_schema": "{\"broker_host\": {\"type\": \"Data\", \"required\": 0}, \"broker_port\": {\"type\": \"Int\", \"default\": 1883}, \"use_ssl\": {\"type\": \"Check\", \"default\": 0}, \"username\": {\"type\": \"Data\"}, \"password\": {\"type\": \"Password\"}, \"topic\": {\"type\": \"Data\", \"required\": 0}, \"qos\": {\"type\": \"Int\", \"default\": 1}, \"publish_from_erp\": {\"type\": \"Check\", \"default\": 0}, \"callback_url\": {\"type\": \"Data\", \"required\": 1}, \"callback_secret\": {\"type\": \"Password\", \"required\": 0}}"
+  },
+  {
+    "doctype": "AlphaX Terminal Driver",
+    "driver_code": "android_mada_mqtt",
+    "driver_name": "Android Mada Agent (MQTT + Callback)",
+    "is_active": 1,
+    "handler_path": "alphax_card_terminal.drivers.impl.android_mada_mqtt.AndroidMadaMqttDriver",
+    "description": "Android agent invokes Mada app. ERP sends request via MQTT topic=device_code; agent posts result to callback_url.",
+    "capabilities": "SALE,REFUND,REVERSAL",
+    "config_schema": "{\"device_code\": {\"type\": \"Data\", \"required\": 1}, \"topic\": {\"type\": \"Data\", \"required\": 0}, \"callback_url\": {\"type\": \"Data\", \"required\": 1}, \"callback_secret\": {\"type\": \"Password\", \"required\": 0}, \"broker_host\": {\"type\": \"Data\", \"required\": 0}, \"broker_port\": {\"type\": \"Int\", \"default\": 8883}, \"use_ssl\": {\"type\": \"Check\", \"default\": 1}, \"username\": {\"type\": \"Data\"}, \"password\": {\"type\": \"Password\"}, \"qos\": {\"type\": \"Int\", \"default\": 1}}"
+  },
+  {
+    "doctype": "AlphaX Terminal Driver",
+    "driver_code": "stripe_terminal_sdk",
+    "driver_name": "Stripe Terminal (Client SDK)",
+    "is_active": 1,
+    "handler_path": "alphax_card_terminal.drivers.impl.stripe_terminal_sdk.StripeTerminalSdkDriver",
+    "description": "Client-side SDK pattern (POS JS). Server issues tokens/intents; reader capture occurs on client.",
+    "capabilities": "SALE,REFUND",
+    "config_schema": "{\"stripe_public_key\": {\"type\": \"Data\", \"required\": 1}, \"stripe_secret_key\": {\"type\": \"Password\", \"required\": 0}, \"stripe_location_id\": {\"type\": \"Data\", \"required\": 0}, \"currency\": {\"type\": \"Data\", \"default\": \"SAR\"}}"
+  }
+]

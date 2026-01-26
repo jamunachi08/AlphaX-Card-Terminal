@@ -1,0 +1,104 @@
+{
+  "doctype": "DocType",
+  "name": "AlphaX Terminal Device",
+  "module": "AlphaX Card Terminal",
+  "custom": 0,
+  "istable": 0,
+  "editable_grid": 1,
+  "track_changes": 1,
+  "autoname": "hash",
+  "fields": [
+    {
+      "fieldname": "enabled",
+      "label": "Enabled",
+      "fieldtype": "Check",
+      "default": 1
+    },
+    {
+      "fieldname": "company",
+      "label": "Company",
+      "fieldtype": "Link",
+      "options": "Company"
+    },
+    {
+      "fieldname": "branch",
+      "label": "Branch",
+      "fieldtype": "Link",
+      "options": "Branch"
+    },
+    {
+      "fieldname": "device_code",
+      "label": "Device Code / Topic",
+      "fieldtype": "Data",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "display_name",
+      "label": "Display Name",
+      "fieldtype": "Data"
+    },
+    {
+      "fieldname": "assigned_user",
+      "label": "Assigned User",
+      "fieldtype": "Link",
+      "options": "User"
+    },
+    {
+      "fieldname": "mqtt_settings",
+      "label": "MQTT Settings",
+      "fieldtype": "Link",
+      "options": "AlphaX MQTT Settings"
+    },
+    {
+      "fieldname": "status",
+      "label": "Status",
+      "fieldtype": "Select",
+      "options": "UNKNOWN\nONLINE\nOFFLINE",
+      "default": "UNKNOWN"
+    },
+    {
+      "fieldname": "last_seen",
+      "label": "Last Seen",
+      "fieldtype": "Datetime"
+    },
+    {
+      "fieldname": "notes",
+      "label": "Notes",
+      "fieldtype": "Small Text"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "submit": 0,
+      "cancel": 0,
+      "amend": 0,
+      "report": 1,
+      "export": 1,
+      "import": 1,
+      "share": 1,
+      "print": 1,
+      "email": 1
+    },
+    {
+      "role": "Accounts Manager",
+      "read": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "allow_rename": 0,
+  "quick_entry": 0,
+  "default_view": "List",
+  "is_submittable": 0,
+  "engine": "InnoDB"
+}
